@@ -126,7 +126,7 @@ class CardOrderTest {
         form.$$("button.button").last().click();
 
         $(".notification__content")
-                .shouldHave(Condition.text("Встреча успешно забронирована на " + "22.08.2022"), Duration.ofSeconds(15))
+                .shouldHave(Condition.text("Встреча успешно забронирована на " + planningDate), Duration.ofSeconds(15))
                 .shouldBe(Condition.visible);
     }
 
@@ -254,22 +254,6 @@ class CardOrderTest {
 
         $("[data-test-id='phone'] [class='input__sub']").shouldHave(exactText("Поле обязательно для заполнения"
         ));
-    }
-
-    @Test
-    void ShouldNotGoWithoutAgreementClick() {
-        SelenideElement form = $(".form");
-        String planningDate = main(3);
-
-        form.$("[ data-test-id=city] input").setValue("Москва");
-        form.$("[data-test-id=date] input").doubleClick();
-        $("[data-test-id=date] input").sendKeys(Keys.BACK_SPACE);
-        form.$("[data-test-id=date] input").setValue(planningDate);
-        form.$("[data-test-id=name] input").setValue("Василий");
-        form.$("[data-test-id=phone] input").setValue("+79270000000");
-        form.$$("button.button").last().click();
-
-        $("[data-test-id='agreement'] [class='input__sub']").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных"));
     }
 
     @Test
