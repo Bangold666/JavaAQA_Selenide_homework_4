@@ -144,7 +144,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные" +
+        $("[data-test-id='name'] [class='input__sub']").shouldHave(exactText("Имя и Фамилия указаные" +
                 " неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
@@ -162,7 +162,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные" +
+        $("[data-test-id='name'] [class='input__sub']").shouldHave(exactText("Имя и Фамилия указаные" +
                 " неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
@@ -180,7 +180,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные" +
+        $("[data-test-id='name'] [class='input__sub']").shouldHave(exactText("Имя и Фамилия указаные" +
                 " неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 
@@ -198,7 +198,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"
+        $("[data-test-id='name'] [class='input__sub']").shouldHave(exactText("Поле обязательно для заполнения"
         ));
     }
 
@@ -216,7 +216,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Телефон указан" +
+        $("[data-test-id='phone'] [class='input__sub']").shouldHave(exactText("Телефон указан" +
                 " неверно. Должно быть 11 цифр, например, +79012345678."));
     }
 
@@ -234,7 +234,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Телефон указан" +
+        $("[data-test-id='phone'] [class='input__sub']").shouldHave(exactText("Телефон указан" +
                 " неверно. Должно быть 11 цифр, например, +79012345678."));
     }
 
@@ -252,7 +252,7 @@ class CardOrderTest {
         form.$("[data-test-id=agreement]").click();
         form.$$("button.button").last().click();
 
-        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"
+        $("[data-test-id='phone'] [class='input__sub']").shouldHave(exactText("Поле обязательно для заполнения"
         ));
     }
 
@@ -269,7 +269,7 @@ class CardOrderTest {
         form.$("[data-test-id=phone] input").setValue("+79270000000");
         form.$$("button.button").last().click();
 
-        $("[data-test-id='agreement'].input_invalid").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных"));
+        $("[data-test-id='agreement'] [class='input__sub']").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных"));
     }
 
 
