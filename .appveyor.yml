@@ -12,7 +12,7 @@ install:
   #Разрешение для работы с файлом gradlew
   - chmod +x gradlew
   # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
-  - java -jar ./artifacts/app-order.jar &
+  - java -jar ./artifacts/app-card-delivery.jar &
 
 build_script:
  - ./gradlew test --info -Dselenide.headless=true # запускаем тест, флаг --info позволяет выводить больше информации
